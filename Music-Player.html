@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ASH MUSIC PLAYER</title>
+    <link rel="icon" type="image/x-icon" href="D:\Kenfra_Project\Music_Player\rock.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidehead">
+                <div class="icon">
+                    <i class="fa-solid fa-circle" style="color: black;"></i>
+                    <i class="fa-solid fa-circle" style="color: black;"></i>
+                    <i class="fa-solid fa-circle" style="color: black;"></i>
+                </div> 
+                <hr style="margin: 15px 0;border: 1px solid #eee;">
+            </div>
+            <div class="sidebody" style="height: 100vh;">
+                <div class="searchbar">
+                    <input placeholder="search" id="searchbar" name="searchbar" type="text">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <ul id="searchResults" class="song-list"></ul>
+                
+            </div>  
+            <div class="sidefoot">
+                <i class="fa-solid fa-music" style="color: black;"></i>
+                <i class="fa-solid fa-headphones-simple" style="color: black;"></i>
+                <i class="fa-solid fa-icons" style="color: black;"></i>
+                <i class="fa-solid fa-compact-disc" style="color: black;"></i>
+                
+
+
+            </div>
+        </div>   
+
+        <div class="data">
+            <div class="top">
+                <h>ASH MUSIC PLAYER </h>
+            </div>
+                <div class="gif-container">
+                    <img src="music-teddy.gif" alt="Music Animation">
+                    
+    
+                </div>
+                <div class="song-info">
+                    <h3 id="songName">No song playing</h3>
+                </div>
+            
+            <div class="progress-container">
+                
+                <input type="range" id="progressBar" value="0" step="1" min="0" max="100">
+            </div>
+            <div class="controls">
+                <button id="prev" onclick="prevSong()">&#9664;</button>
+                <button id="playPause" onclick="togglePlayPause()">&#9654;</button>
+                <button id="next" onclick="nextSong()">&#9654;&#9654;</button>
+            </div>
+            
+            
+        </div>
+
+        <div class="side">
+            <h2>Music List</h2>
+            <ul id="musicList"></ul>
+           
+            
+        </div>
+        
+        <!-- The audio player -->
+        <div class="audio-player" style="display: none;">
+            <audio id="audio-player" controls>
+                <source id="audio-source" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
